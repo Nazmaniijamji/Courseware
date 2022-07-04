@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcourseware=self.webpackChunkcourseware||[]).push([[965],{3033:e=>{e.exports=JSON.parse('{"pluginId":"Semester-1","version":"current","label":"Next","banner":null,"badge":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[]},"docs":{"docs/index":{"id":"docs/index","title":"index","description":""}}}')}}]);
