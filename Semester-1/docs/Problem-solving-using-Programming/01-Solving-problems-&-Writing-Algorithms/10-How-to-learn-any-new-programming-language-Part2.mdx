@@ -24,7 +24,78 @@ We note that the commands – **fd 100 rt 90** are repeated *four times*. Will i
 
  `repeat 4 [fd 100 rt 90]`
 
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images9.png)
+
+ - Any command can be done inside a loop i.e. we can even use a loop within a loop. A loop inside another loop is called **a nested loop**. This gives us even more power because now you can draw figures with even less commands than before.
+
+**Problem 1:**
+Try drawing an asterisk(*) using loops. The asterisk should have 18 arms instead of the five or six you normally see on a keypad. The figure should look something like this:
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images13.png)
+
+
+<details>
+
+  <summary>Check the Hint!</summary>
+  
+
+  
+Hint: To draw eighteen arms we would rotate the circle each time by 360/18 = 20 degrees
+
+   
+  
+</details>  
+
+<details>
+
+  <summary>Check the Solution!</summary>
+  
+
+cs repeat 18 [ fd 80 bk 80 rt 20]
+
+We draw the line 18 times by using the repeat command and each time we also rotate the turtle by 360/18 = 20 degrees.
+  
+
+   
+  
+</details>  
 
 
 	
+**Problem 2:** 
+Draw the following grid of squares representing using LOGO.
 
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images14.png)
+
+<details>
+
+  <summary>Check the Hint!</summary>
+  
+
+Hint: Try drawing the figure by using the loop we used for drawing a square above and then using nested loops
+
+   
+  
+</details>  
+
+<details>
+
+  <summary>Check the Hint!</summary>
+  
+
+cs rt 45
+repeat 4 [repeat 4 [fd 50 rt 90 ] rt 90 fd 50]  
+
+ - First we rotate the turtle initially to draw an “X” instead of “+”
+
+ - Then the inner loop draws a square as in the example we discussed above and the outer loop draws the square 4 times.
+
+ - Each time after drawing one square we rotate the turtle by 90 degrees and move it forward by 90 units
+
+   
+  
+</details>  
+
+
+**Problem 3:** 
+Draw 30 octagons with edges that are each 50 units to formulate the following “Mandala” figure:
