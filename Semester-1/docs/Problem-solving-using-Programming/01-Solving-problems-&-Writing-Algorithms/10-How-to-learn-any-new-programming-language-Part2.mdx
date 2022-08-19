@@ -1,4 +1,4 @@
-# How to learn a new programming language(Lab) - Part 2
+# How to learn a new programming language - Part 2
 
 ## Lesson Objective
 You learnt the simple and beginner friendly language “LOGO” in the previous lesson. This lesson is a continuation of the previous lesson and goes into further detailed features of the language.
@@ -80,7 +80,7 @@ Hint: Try drawing the figure by using the loop we used for drawing a square abov
 
 <details>
 
-  <summary>Check the Hint!</summary>
+  <summary>Check the Solution!</summary>
   
 
 cs rt 45
@@ -98,4 +98,160 @@ repeat 4 [repeat 4 [fd 50 rt 90 ] rt 90 fd 50]
 
 
 **Problem 3:** 
-Draw 30 octagons with edges that are each 50 units to formulate the following “Mandala” figure:
+Draw 30 octagons with edges that are each 50 units to formulate the following “Mandala” figure.
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images12.png)
+
+
+
+<details>
+
+  <summary>Check the Hint!</summary>
+
+Hint: Try forming an octagon first using a loop and then calculate how many degrees to rotate to draw 30 octagons in 360 degrees.
+
+</details>
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+cs 
+repeat 30 [rt 12 repeat 8 [fd 50 lt 45]]
+
+ - Repeat 8 [fd 50 lt 45] is used to draw an octagon
+ 
+ - The outer repeat command is used to draw 30 octagons
+ 
+ - The turtle is rotated by 12 degrees (360/30 = 12 degrees) each time before the inner loop draws an octagon
+
+</details>
+
+
+**Problem 4:**
+Draw the following spiral using loops
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images10.png)
+
+<details>
+
+  <summary>Check the Hint!</summary>
+
+Hint: We can use a variable called “size” to move the turtle according to it and then every time the turtle turns right in each iteration we increase the value of size (by 5 here).
+
+
+</details>
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+cs
+make "size 10
+repeat 50 [
+  fd :size
+  rt 90 
+  make "size :size + 5
+]
+
+
+
+</details>
+
+
+Now let’s look at another very useful *command*. Check out the following thought bubble first and write down your thoughts.
+
+### Randomisation (The RANDOM Command)
+In some situations, we need to generate random numbers, for e.g. random positions where your target will appear in shooting games or to play dice or tic-tac-toe. This can be achieved with the help of the RANDOM command.
+
+**RANDOM n**
+
+ - This command returns a random number that ranges from 0 to n-1.
+
+ - `Example: random 7 will give a number from 0 to 6 similar to a die`
+
+> Let’s look at one example on how to draw a figure using random numbers. The output you get will be different from the figure shown…(that’s the beauty of something random, you create unique art everytime!)
+
+**Problem 5:** 
+
+Draw 20 squares all with one vertex at home position 
+
+ - with random pen colours (colour codes from 0 to 15)
+
+ - with random pensizes (maximum 4)
+
+ - with random side length(at max 199) and at random directions (at max 360)
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images16.png)
+
+
+<details>
+
+  <summary>Check the Hint!</summary>
+
+
+
+Hint: We have to use a variable called “size” and assign a random value to it in each of the 20 iterations along with setting the size and colour of the pen as random. We should also change the direction of the turtle using the rt command in the repeat block.
+
+
+</details>
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+cs
+repeat 20 [
+	setcolor random 16
+	setpensize random 5
+	make "side random 200
+	repeat 4 [fd :side rt 90]
+	rt random 360
+]
+
+
+</details>
+
+**Problem 6:** 
+Draw the following circular spiral with a random pen colour and pen size as 2.
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images4.png)
+
+<details>
+
+  <summary>Check the Hint!</summary>
+
+
+Hint: Start with a variable that represents the size of arc for the iterations and draw arcs of 180 degrees in each repetition and then adjust the turtle so that the ends of the arcs from two consecutive iterations meet up.
+
+</details>
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+cs
+rt 90
+setpensize 2
+setpencolor random 16
+make "size 1
+repeat 30 [
+      arc 180 :size
+      pu bk 5 pd
+      rt 180
+      make "size :size + 5
+]
+
+ - First we adjust the turtle by rotating it to the right by 90 degrees because we want to draw the arcs from West to East or East to West.
+
+ - Then we initialise a size variable by 1 and we draw arcs with radius equal to size in each iteration.
+
+ - The most important step here is we move back the turtle by the same amount with which we are increasing the value of radii in each iteration. Try to observe a bit closely and you’ll understand why.
+
+ - Then we flip the turtle(rotate by 180 degrees) to draw the arc in the opposite direction to the previous arc.
+
+ - At last, we increase the value of size by 3 and this is repeated.
+
+</details>
+
+
