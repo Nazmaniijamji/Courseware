@@ -28,8 +28,7 @@ We note that the commands – **fd 100 rt 90** are repeated *four times*. Will i
 
  - Any command can be done inside a loop i.e. we can even use a loop within a loop. A loop inside another loop is called **a nested loop**. This gives us even more power because now you can draw figures with even less commands than before.
 
-**Problem 1:**
-Try drawing an asterisk(*) using loops. The asterisk should have 18 arms instead of the five or six you normally see on a keypad. The figure should look something like this:
+**Problem 1:** Try drawing an asterisk(*) using loops. The asterisk should have 18 arms instead of the five or six you normally see on a keypad. The figure should look something like this:
 
 ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images13.png)
 
@@ -62,8 +61,7 @@ We draw the line 18 times by using the repeat command and each time we also rota
 
 
 	
-**Problem 2:** 
-Draw the following grid of squares representing using LOGO.
+**Problem 2:** Draw the following grid of squares representing using LOGO.
 
 ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images14.png)
 
@@ -97,8 +95,7 @@ repeat 4 [repeat 4 [fd 50 rt 90 ] rt 90 fd 50]
 </details>  
 
 
-**Problem 3:** 
-Draw 30 octagons with edges that are each 50 units to formulate the following “Mandala” figure.
+**Problem 3:** Draw 30 octagons with edges that are each 50 units to formulate the following “Mandala” figure.
 
 ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images12.png)
 
@@ -128,8 +125,7 @@ repeat 30 [rt 12 repeat 8 [fd 50 lt 45]]
 </details>
 
 
-**Problem 4:**
-Draw the following spiral using loops
+**Problem 4:** Draw the following spiral using loops
 
 ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images10.png)
 
@@ -172,9 +168,9 @@ In some situations, we need to generate random numbers, for e.g. random position
 
 > Let’s look at one example on how to draw a figure using random numbers. The output you get will be different from the figure shown…(that’s the beauty of something random, you create unique art everytime!)
 
-**Problem 5:** 
+**Problem 5:**Draw 20 squares all with one vertex at home position
 
-Draw 20 squares all with one vertex at home position 
+
 
  - with random pen colours (colour codes from 0 to 15)
 
@@ -212,8 +208,8 @@ repeat 20 [
 
 </details>
 
-**Problem 6:** 
-Draw the following circular spiral with a random pen colour and pen size as 2.
+**Problem 6:** Draw the following circular spiral with a random pen colour and pen size as 2.
+
 
 ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images4.png)
 
@@ -253,5 +249,188 @@ repeat 30 [
  - At last, we increase the value of size by 3 and this is repeated.
 
 </details>
+
+Now, try some more shapes. 
+
+![](https://media2.giphy.com/media/XBX2iVKYw0fcMiSX8F/giphy.gif?cid=790b76118b3aacecac88ef5669b147925e561a1d593bce27&rid=giphy.gif&ct=g)
+
+*Source: [Giphy](https://giphy.com/gifs/IntoAction-XBX2iVKYw0fcMiSX8F)*
+
+
+**Problem 7:** Draw a heptagon with sides as 50 units
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images7.png)
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+repeat 7 [fd 50 rt 52]
+
+</details>
+
+
+**Problem 8:** Draw the following diagram using LOGO
+
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images11.png)
+
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+repeat 5 [
+                arc 360 50
+                fd 100
+                rt 90
+                ]
+
+
+</details>
+
+
+**Problem 9:** Draw the following staircase using LOGO
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images5.png)
+
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+fd 50 rt 90
+fd 50 rt 90
+fd 50 lt 90
+fd 50 rt 90
+fd 50 lt 90
+fd 50 rt 90
+fd 50 rt 90
+fd 250 rt 90
+fd 50 rt 90
+fd 50 lt 90
+fd 50 rt 90 fd 50
+
+
+</details>
+
+
+**Problem 10:** Draw the following figure using squares of side 100.
+
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images2.png)
+
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+
+repeat 5 [repeat 4 [fd 100 rt 90] rt 72]
+
+
+</details>
+
+
+
+**Problem 11:**  Draw the following figure using LOGO programming
+
+[*Hint: This is just an advanced version of the previous problem.*]
+
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images8.png)
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+ repeat 30 [repeat 4 [fd 100 rt 90] rt 12]
+
+
+</details>
+
+
+**Problem 12:** Draw the following dashed octagon using LOGO programming
+
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images1.png)
+
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+repeat 8 [
+ repeat 5 [setwidth 1 fd 10 setwidth 4 fd 10] 
+ lt 45 
+]
+
+
+</details>
+
+
+
+**Problem 13:** Draw 15 semi-circles all with their centres at home position 
+
+  - with random pen colours (colour codes from 0 to 15)
+
+  - with random pensizes (maximum 9)
+
+  - with random radii (at max 199) and at random directions (at max 360)
+
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images3.png)
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+repeat 15 [ 
+  setcolor random 16 
+  setpensize random 10
+  rt random 360
+  arc 180 random 200
+]
+
+
+
+</details>
+
+
+**Problem 14:** Draw the following triangular spiral pattern using LOGO
+
+[Hint: The size of the first side of the innermost triangle is 20. Also, the number of repetitions in spiral patterns is not important.]
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/logo2images17.png)
+
+
+<details>
+
+  <summary>Check the Solution!</summary>
+
+make "size 20
+rt 30
+repeat 60 [
+  fd :size
+  rt 120
+  make "size :size + 7
+]
+
+
+
+</details>
+
+
+Woah, we have come this far!!
+
+![](https://media4.giphy.com/media/1mgPC5uRVeZ12xx8ky/giphy.gif?cid=790b761173b08c4e713907dd7f6ba44724bd6e6e2fa741a3&rid=giphy.gif&ct=g)
+
+*Source: [Giphy](https://giphy.com/gifs/hyperrpg-game-reaction-1mgPC5uRVeZ12xx8ky)*
+
 
 
