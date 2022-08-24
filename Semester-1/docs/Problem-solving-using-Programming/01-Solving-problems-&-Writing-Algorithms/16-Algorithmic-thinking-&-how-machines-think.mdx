@@ -61,6 +61,30 @@ Let's get familiar with the term *"Alogrithmic Thinking".*
 
 <Youtube videoId="uvsQPXJaulU" start="00" end="74"/>
 
+
+
+**Check-point Assessment**
+
+Q. Algorithm is…
+
+A. Blueprint of the steps to complete a task.
+
+B. Actual stepwise execution of a task.
+
+C. Both of them.
+
+D. None of the above.
+
+
+<details>
+
+  <summary>Check the Solution!</summary>  
+
+Answer: A) Blueprint of the steps to complete a task.
+
+
+</details>
+
 ## Definition of Algorithmic Thinking
 
  - Algorithmic thinking is a systematic way of thinking through problems and solutions in a way that’s similar to how a computer would run. This approach automates the problem-solving process by creating a series of systematic, logical steps for the computer(or even a human) to follow.
@@ -83,6 +107,27 @@ Let's get familiar with the term *"Alogrithms".*
 <Youtube videoId="uvsQPXJaulU" start="74" end="225"/>
 
 
+**Check-point Assessment**
+
+Q. Which of the following is false?
+
+A. Algorithm is a set of steps to carry out a task.
+
+B. Algorithms follow a sequence.
+
+C. Algorithms are always written in C language.
+
+D. Algorithms are used as blueprints for actual computer programs.
+
+
+<details>
+
+  <summary>Check the Solution!</summary>  
+
+C) Algorithms are always written in C language.
+
+
+</details>
 
 **Essential Properties of Algorithms**
 
@@ -118,6 +163,10 @@ We will learn about flowcharts and pseudocodes in detail shortly.
 It is a **diagrammatic notation** that uses various graphical symbols to represent an algorithm and it produces the most unambiguous and easy to understand representation of an algorithm.
 
 It makes use of symbols which are connected among them to indicate the flow of information and processing. 
+
+Checkout the short video on flowchart. 
+<Youtube videoId="uvsQPXJaulU" start="225" end="270"/>
+
 
 >An example for a flowchart considering a real life situation is described as below
 
@@ -210,6 +259,52 @@ Like all skills, thinking algorithmically takes practice.
 `The next step is to actually tackle the problem by dividing it into smaller parts`
 
 >Here, we can divide the problem into checking for factors and then counting the number of factors for the given number.
+
+`Solve each smaller part of the problem`
+
+>To check for factors, we can divide the numbers and if the remainder is zero then the divisor is a factor of the number. For example, 4 / 2 gives remainder 0, so 2 is a factor of 4.
+
+>Then, we divide the given number n by all numbers from 2 to n-1 and if we find a number that is a factor of n, then it's not prime. And, if we don’t find such a number then n is prime.
+
+`Improve the efficiency of the algorithm`
+
+>We can reduce the number of factor checks in the given problem by only checking from 2 to n/2 (try figuring out why?)
+
+
+Let us now represent the algorithm we developed above using flowchart and pseudocode…
+
+
+**Flowchart**
+
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/problem-solving/image5.png)
+
+**Pseudocode**
+
+```START
+INPUT n
+isPrime = TRUE
+IF n <= 1
+isPrime = FALSE
+i = 2
+WHILE i <= n / 2 AND isPrime is TRUE
+remainder = n % i
+IF remainder is equal to 0
+isPrime = FALSE
+ELSE
+i = i + 1
+END IF
+END WHILE
+IF isPrime is TRUE
+DISPLAY “Not a Prime Number”
+ELSE
+DISPLAY “A Prime Number”
+END IF
+STOP
+
+
+*We will be learning how to create flowcharts and writing pseudocode from the very basic problems to more intricate problems in the next lesson.*
+
+
 
 
 
